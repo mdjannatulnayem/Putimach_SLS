@@ -50,6 +50,7 @@
             this.UsbSerial = new System.IO.Ports.SerialPort(this.components);
             this.flightTimer = new System.Windows.Forms.Timer(this.components);
             this.Clock = new System.Windows.Forms.Timer(this.components);
+            this._reset = new System.Windows.Forms.Button();
             this.backPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -65,6 +66,7 @@
             this.backPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
             this.backPanel.Controls.Add(this.sidePanel);
             this.backPanel.Controls.Add(this.flowLayoutPanel1);
+            this.backPanel.Controls.Add(this._reset);
             this.backPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.backPanel.Location = new System.Drawing.Point(0, 0);
             this.backPanel.Name = "backPanel";
@@ -293,6 +295,19 @@
             this.Clock.Interval = 1000;
             this.Clock.Tick += new System.EventHandler(this.Clock_Tick);
             // 
+            // _reset
+            // 
+            this._reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this._reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._reset.ForeColor = System.Drawing.SystemColors.Info;
+            this._reset.Location = new System.Drawing.Point(565, 18);
+            this._reset.Name = "_reset";
+            this._reset.Size = new System.Drawing.Size(55, 416);
+            this._reset.TabIndex = 4;
+            this._reset.Text = "Reset";
+            this._reset.UseVisualStyleBackColor = false;
+            this._reset.Click += new System.EventHandler(this._reset_Click);
+            // 
             // LandingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,6 +359,7 @@
         private System.Windows.Forms.Timer Clock;
         private System.Windows.Forms.Label ctd_label;
         private System.Windows.Forms.Label countLabel;
+        private System.Windows.Forms.Button _reset;
     }
 }
 

@@ -81,7 +81,11 @@ namespace Putimach_SLS
         private void __disconn_Click(object sender, EventArgs e)
         {
             if (UsbSerial.IsOpen)
+            {
                 UsbSerial.Close();
+                connected = false;
+                connstatus.Text = $"Disconnected!";
+            }
         }
 
         private void _start_Click(object sender, EventArgs e)
@@ -129,6 +133,19 @@ namespace Putimach_SLS
                 writeLog(ex.Message);
             }
             return str;
+        }
+
+        private void _reset_Click(object sender, EventArgs e)
+        {
+            if (!connected)
+            {
+                count_init = false;
+                count = 30;
+                flightlog.Text = "// Inflight logs >>>\n";
+                launchState = false;
+                /*terminated = false;*/
+                writeLog($"Performing reset!");
+            }
         }
 
         private void _termnt_Click(object sender, EventArgs e)
