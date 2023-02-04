@@ -155,6 +155,7 @@ namespace Putimach_SLS
             //}
 
             launchState = Convert.ToBoolean(dataFeed);
+            writeLog($"Launch status: {launchState}");
         }
 
         //private bool isAppropriate(string local)
