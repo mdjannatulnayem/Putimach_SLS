@@ -81,7 +81,7 @@ void receiveMessage(long int packetSize) {
     return;
   }
   
-  relay = incoming == "0" ? false : true;
+  relay = incoming == "L" ? false : true;
 
   Serial.print("Received data " + incoming);
   Serial.print(" from 0x" + String(sender, HEX));

@@ -33,7 +33,7 @@
             this.sidePanel = new System.Windows.Forms.FlowLayoutPanel();
             this.headerPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.header_i = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.header_ii = new System.Windows.Forms.Label();
             this._start = new System.Windows.Forms.Button();
             this._abort = new System.Windows.Forms.Button();
             this._termnt = new System.Windows.Forms.Button();
@@ -93,7 +93,7 @@
             this.headerPanel.AutoSize = true;
             this.headerPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.headerPanel.Controls.Add(this.header_i);
-            this.headerPanel.Controls.Add(this.label1);
+            this.headerPanel.Controls.Add(this.header_ii);
             this.headerPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.headerPanel.Location = new System.Drawing.Point(8, 13);
             this.headerPanel.Name = "headerPanel";
@@ -112,16 +112,16 @@
             this.header_i.TabIndex = 1;
             this.header_i.Text = "Putimach";
             // 
-            // label1
+            // header_ii
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(8, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Safe Launch System";
+            this.header_ii.AutoSize = true;
+            this.header_ii.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.header_ii.ForeColor = System.Drawing.SystemColors.Info;
+            this.header_ii.Location = new System.Drawing.Point(8, 34);
+            this.header_ii.Name = "header_ii";
+            this.header_ii.Size = new System.Drawing.Size(181, 24);
+            this.header_ii.TabIndex = 2;
+            this.header_ii.Text = "Safe Launch System";
             // 
             // _start
             // 
@@ -326,7 +326,7 @@
         private System.Windows.Forms.FlowLayoutPanel backPanel;
         private System.Windows.Forms.FlowLayoutPanel headerPanel;
         private System.Windows.Forms.Label header_i;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label header_ii;
         private System.Windows.Forms.FlowLayoutPanel sidePanel;
         private System.IO.Ports.SerialPort UsbSerial;
         private System.Windows.Forms.Button _start;
