@@ -25,7 +25,7 @@ namespace Putimach_SLS
             flightlog.Text = "// Inflight logs >>>\n";
         }
 
-        private void Clock_Tick(object sender, System.EventArgs e)
+        private void Clock_Tick(object sender, EventArgs e)
         {
             if (count_init && count > 0)
             {
@@ -38,7 +38,7 @@ namespace Putimach_SLS
             }
         }
 
-        private void flightTimer_Tick(object sender, System.EventArgs e)
+        private void flightTimer_Tick(object sender, EventArgs e)
         {
             if (UsbSerial.IsOpen)
             {
@@ -53,7 +53,7 @@ namespace Putimach_SLS
             }
         }
 
-        private void __connect_Click(object sender, System.EventArgs e)
+        private void __connect_Click(object sender, EventArgs e)
         {
             if (!connected)
             {
@@ -78,19 +78,19 @@ namespace Putimach_SLS
             }
         }
 
-        private void __disconn_Click(object sender, System.EventArgs e)
+        private void __disconn_Click(object sender, EventArgs e)
         {
             if (UsbSerial.IsOpen)
                 UsbSerial.Close();
         }
 
-        private void _start_Click(object sender, System.EventArgs e)
+        private void _start_Click(object sender, EventArgs e)
         {
             if (!launchState && connected)            
                 count_init = true;
         }
 
-        private void _abort_Click(object sender, System.EventArgs e)
+        private void _abort_Click(object sender, EventArgs e)
         {
             if (!launchState && connected)
             {
