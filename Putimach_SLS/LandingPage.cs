@@ -10,7 +10,7 @@ namespace Putimach_SLS
 
         public static bool connected;
 
-        bool launchState, terminated, count_init;
+        bool launchState, /*terminated,*/ count_init;
 
         string dataFeed;
 
@@ -98,11 +98,6 @@ namespace Putimach_SLS
                 count_init = false;
                 countLabel.Text = $"00 : 00 : {count}";
             }
-        }
-
-        private void _eject_Click(object sender, System.EventArgs e)
-        {
-
         }
 
         private void writeLog(string log)
